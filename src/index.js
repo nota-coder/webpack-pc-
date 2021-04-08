@@ -1,12 +1,11 @@
-import _ from 'lodash';
-import printMe from './Print';
-import './css/index.css'
-function component() {
-    const element = document.createElement('div');
-  
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  printMe();
-    return element;
-  }
-  
-  document.body.appendChild(component());
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+
+ReactDOM.render(
+    <App />,
+  document.getElementById('root')
+);
+
+

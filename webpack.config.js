@@ -18,6 +18,11 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(js|jsx)$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
+      },
+      {
         test: /\.css$/,
         use: [
           'style-loader',
@@ -44,7 +49,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'webpack-react'
+      title: 'webpack-react',
+      template: path.resolve(__dirname, 'src/index.html'),　　
+    	inject: true　　　　 
     })
   ]
   
